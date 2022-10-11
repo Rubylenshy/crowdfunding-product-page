@@ -259,12 +259,14 @@ img[alt='Mastercraft Logo']{
     border-radius: 10px;
     padding: 40px 30px 30px;
     width: 90%;
+    animation: fade .5s;
 }
 .modal-paragraph{
     margin: 20px 0;
 }
 .modal .card{
     width: 100%;
+    cursor: pointer;
 }
 .modal .card:focus{
     border: 1px solid var(--dark-cyan);
@@ -287,7 +289,7 @@ img[alt='Mastercraft Logo']{
 .modal input[type='radio']:checked{
     background: var(--moderate-cyan);
     color: var(--moderate-cyan);
-    filter: brightness(2);
+    filter: brightness(1.5);
 }
 .card-checked{
     border: 2px solid var(--dark-cyan);
@@ -352,6 +354,7 @@ img[alt='Mastercraft Logo']{
     backdrop-filter: blur(1px);
     -webkit-backdrop-filter: blur(1px);
     background: rgb(0, 0, 0, .4);
+    animation: fade .5s;
 }
 .overlay,
 .thank-you,
@@ -537,5 +540,19 @@ img[alt='Mastercraft Logo']{
     }
     50%{
         transform: scale(105%);
+    }
+}
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: .25;
+    }
+    50%{
+        opacity: .5;
+    }
+    100%{
+        opacity: 1;
     }
 }
