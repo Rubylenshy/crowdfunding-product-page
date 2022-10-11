@@ -75,7 +75,7 @@ for (let i = 0; i < continueBtn.length; i++) {
     continueBtn[i].addEventListener('click', ()=>{
         modal.classList.remove('show');
         thankYou.classList.add('show');
-        thankYou.style.animation = 'spin 3s';
+        thankYou.style.animation = 'fade .5s';
     }, false)
     
 }
